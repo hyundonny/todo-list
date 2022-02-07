@@ -2,6 +2,13 @@
 
 Todo List created via React and Redux Toolkit.
 
+## Features
+
+- Light/dark mode toggle
+- Add/delete todo items
+- Filter by todo status (active/completed)
+- Clear all completed todos
+
 ## Demo
 
 Live Demo: [Link](https://github.com/hyundonny/todo-list)
@@ -31,13 +38,6 @@ Start the server
 ```bash
   npm run start
 ```
-
-## Features
-
-- Light/dark mode toggle
-- Add/delete todo items
-- Filter by todo status (active/completed)
-- Clear all completed todos
 
 ## Acknowledgements
 
