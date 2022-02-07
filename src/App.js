@@ -7,6 +7,7 @@ import Container from 'components/container';
 import Header from 'features/themes/header';
 import TodoInput from 'features/todos/input';
 import TodoList from 'features/todos/list';
+import Footer from 'features/filters/footer';
 
 function App() {
   const currentTheme = useSelector(state => state.theme);
@@ -24,6 +25,7 @@ function App() {
         <Header />
         <TodoInput />
         <TodoList />
+        <Footer />
       </Container>
     </ThemeProvider>
   );

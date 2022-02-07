@@ -5,14 +5,29 @@ export const TodoItem = styled.li`
   padding-left: 4.5rem;
   background-color: ${({ theme }) => theme.conditional.color.container};
   position: relative;
-  color: ${({ theme }) => theme.conditional.color.text};
   cursor: pointer;
   transition: all 500ms ease;
   border-bottom: 1px solid ${({ theme }) => theme.conditional.color.border};
   user-select: none;
+`;
 
-  &:hover {
-    color: ${({ theme }) => theme.conditional.color['text-hover']};
+export const TodoText = styled.span`
+  position: relative;
+  color: ${({ theme, completed }) =>
+    completed
+      ? theme.conditional.color.completed
+      : theme.conditional.color.text};
+  transition: color 200ms ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: ${({ completed }) => (completed ? '100%' : '0%')};
+    height: 2px;
+    transition: width 200ms ease;
+    background: ${({ theme }) => theme.conditional.color.completed};
   }
 `;
 

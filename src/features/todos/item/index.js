@@ -30,7 +30,7 @@ function TodoItem({ id }) {
       <S.CompletedButton type="button" completed={todo.completed}>
         <Check />
       </S.CompletedButton>
-      {todo.text}
+      <S.TodoText completed={todo.completed}>{todo.text}</S.TodoText>
       <S.DeleteButton type="button" onClick={handleDelete}>
         <Cross />
       </S.DeleteButton>
